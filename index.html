@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - E-Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>LearnHub</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="courses">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="progress">Progress</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="profile">Profile</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Transform Your Future with Expert-Led Courses</h1>
+                        <p>Access thousands of courses, track your progress, and learn at your own pace with our comprehensive e-learning platform.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" data-page="courses">Explore Courses</button>
+                            <button class="btn btn-secondary" data-page="progress">View Progress</button>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Courses</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50K+</h3>
+                            <p>Students</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Instructors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-section">
+                <div class="container">
+                    <h2>Featured Courses</h2>
+                    <div class="courses-grid" id="featured-courses">
+                        <!-- Featured courses will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Page -->
+        <section id="courses" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>All Courses</h1>
+                    <div class="search-filter">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="course-search" placeholder="Search courses...">
+                        </div>
+                        <select id="category-filter">
+                            <option value="">All Categories</option>
+                            <option value="programming">Programming</option>
+                            <option value="design">Design</option>
+                            <option value="business">Business</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="courses-grid" id="all-courses">
+                    <!-- All courses will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Page -->
+        <section id="progress" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Your Learning Progress</h1>
+                    <p>Track your achievements and continue your learning journey</p>
+                </div>
+                
+                <div class="progress-overview">
+                    <div class="progress-card">
+                        <h3>Overall Progress</h3>
+                        <div class="circular-progress" data-progress="68">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle cx="60" cy="60" r="54" stroke="#e6e6e6" stroke-width="8" fill="none"/>
+                                <circle cx="60" cy="60" r="54" stroke="#4A90E2" stroke-width="8" fill="none" 
+                                        stroke-dasharray="339.292" stroke-dashoffset="108.573" class="progress-bar"/>
+                            </svg>
+                            <div class="progress-text">68%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-book"></i>
+                            <h4>Courses Enrolled</h4>
+                            <span>12</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Completed</h4>
+                            <span>8</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>Hours Learned</h4>
+                            <span>156</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Certificates</h4>
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="enrolled-courses">
+                    <h2>Your Courses</h2>
+                    <div class="enrolled-courses-list" id="enrolled-courses">
+                        <!-- Enrolled courses will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profile" class="page">
+            <div class="container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Profile Picture">
+                    </div>
+                    <div class="profile-info">
+                        <h1>John Doe</h1>
+                        <p>Web Developer | Lifelong Learner</p>
+                        <div class="profile-badges">
+                            <span class="badge">JavaScript Expert</span>
+                            <span class="badge">React Specialist</span>
+                            <span class="badge">UI/UX Designer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-content">
+                    <div class="profile-section">
+                        <h2>Learning Activity</h2>
+                        <div class="activity-chart">
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                                <p>7 days learning streak!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h2>Achievements</h2>
+                        <div class="achievements-grid">
+                            <div class="achievement">
+                                <i class="fas fa-trophy"></i>
+                                <h4>First Course Completed</h4>
+                                <p>Completed your first course</p>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-fire"></i>
+                                <h4>7-Day Streak</h4>
+                                <p>Learned for 7 consecutive days</p>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-star"></i>
+                                <h4>Top Performer</h4>
+                                <p>Scored 95%+ in 5 courses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Course Modal -->
+    <div id="course-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="video-player">
+                    <video id="course-video" controls>
+                        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="course-details">
+                    <h2 id="modal-course-title">Course Title</h2>
+                    <p id="modal-course-description">Course description will appear here.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="modal-progress"></div>
+                        </div>
+                        <span class="progress-text">Progress: <span id="modal-progress-text">0%</span></span>
+                    </div>
+                    <div class="course-chapters">
+                        <h3>Course Chapters</h3>
+                        <ul id="chapter-list">
+                            <!-- Chapters will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
